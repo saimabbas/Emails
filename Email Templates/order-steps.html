@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            width: 100%;
+        }
+
+        .otp-upper-box {
+            background-color: #FCFCFC;
+            display: flex;
+            padding: 3.5vw 3.5vw 0 3.5vw;
+            position: relative;
+            margin-bottom: 5vw;
+        }
+
+        .oub-img-1 {
+            width: 12.5%;
+            height: 6vw;
+            object-fit: contain;
+            margin-right: 2.5vw;
+        }
+
+        .otp-upper-box span {
+            padding-left: 2.5vw;
+            border-left: 0.25vw solid #BB85FF;
+            height: 6vw;
+            width: 70%;
+        }
+
+        .otp-upper-box span h1 {
+            font-size: 1vw;
+            font-weight: 600;
+            margin: 0 0 0.25vw 0;
+        }
+
+        .otp-upper-box span p {
+            font-size: 0.9vw;
+            font-weight: 400;
+            margin: 0 0 0.25vw 0;
+
+        }
+
+        .oub-img-2 {
+            width: 8.5vw;
+        }
+
+        .footer {
+            background-color: #6B6B6B;
+            margin-top: 2.5vw;
+        }
+
+        .footer-box-1 {
+            display: flex;
+            width: 100%;
+            padding: 1.5vw 0;
+        }
+
+        .footer-box-1-box {
+            width: 25%;
+            display: flex;
+        }
+
+        .footer-contact-box img {
+            width: 1.5vw;
+            height: 1.5vw;
+            object-fit: contain;
+            margin-right: 0.75vw;
+        }
+
+        .footer-contact-box span p {
+            font-size: 0.9vw;
+            margin: 0;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .footer-contact-box span h6 {
+            font-size: 0.9vw;
+            margin: 0;
+            font-weight: 600;
+            color: #fff !important;
+        }
+
+        .footer-contact-box span h6 a {
+            color: #fff !important;
+        }
+
+        .footer-social-box img {
+            width: 1.15vw;
+            height: 1.15vw;
+            object-fit: contain;
+            margin: 0.85vw 1vw 0 1vw;
+        }
+
+        .footer-contact-box div {
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .footer-box-2 {
+            display: flex;
+            padding: 1.5vw 0;
+            border-top: 0.1vw solid #fff;
+            border-bottom: 0.1vw solid #fff;
+        }
+
+        .footer-box-2-box-1 {
+            width: 60%;
+        }
+
+        .footer-box-2-box-2 {
+            width: 40%;
+        }
+
+        .footer-box-2-box-1 div {
+            margin: 0.65vw 0 0 11%;
+            width: max-content;
+        }
+
+        .footer-box-2-box-1 div p {
+            font-size: 0.9vw;
+            color: white;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .footer-box-2-box-2 div {
+            width: max-content;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .footer-box-2-box-2 div img {
+            width: 35%;
+            object-fit: contain;
+            margin: 0 auto;
+        }
+
+        .footer-box-3 {
+            padding: 1.5vw 0;
+        }
+
+        .footer-box-3 p {
+            font-size: 0.9vw;
+            margin: 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .footer-box-1-box.footer-social-box div {
+            margin: 0 auto;
+        }
+
+        .prog-super-box {
+            width: 70%;
+            display: flex;
+            margin: 0 15%;
+        }
+
+        .prog-container {
+            width: 15%;
+        }
+
+        .prog-container img {
+            width: 100%;
+            height: 3vw;
+            object-fit: contain;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .prog-container h6 {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 0;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .prog-container h5 {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 0;
+            color: #CBCBCB;
+            text-align: center;
+        }
+
+        .prog-super-box span {
+            width: 30%;
+            height: 0.15vw;
+            background-color: #BB85FF;
+            margin-top: 1.5vw;
+            position: relative;
+            z-index: 0;
+
+        }
+
+        .view-order-btn {
+            margin: 1.5vw auto;
+            width: max-content;
+        }
+
+        .view-order-btn button {
+            width: 100%;
+            padding: 0.65vw 2vw;
+            font-size: 0.9rem;
+            color: #fff;
+            border-radius: 100px;
+            background-color: #BB85FF;
+            margin: 0 auto;
+            border: 0;
+            outline: 0;
+        }
+
+        p.below-btn-text {
+            font-size: 0.9rem;
+            margin: 0 auto;
+            width: 80%;
+            text-align: center;
+        }
+
+        p.below-btn-text span {
+            color: #BB85FF;
+            text-decoration: underline;
+        }
+
+        .order-box-1 {
+            width: 70%;
+            margin: 1.5vw auto;
+            padding: 1vw 2vw;
+            background-color: rgba(223, 197, 255, 0.15);
+            border-radius: 0.5vw;
+        }
+
+        .ob-1-head {
+            width: 100%;
+            display: flex;
+        }
+
+        .ob-1-head-left {
+            width: 50%;
+        }
+        .ob-1-head-right {
+            width: 50%;
+        }
+
+        .ob-1-head-left p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .ob-1-head-left p span {
+            color: #BB85FF;
+        }
+
+        .ob-1-head-right {
+            display: flex;
+            padding: 0 0 0 10%;
+        }
+
+        .ob-1-head-right p {
+            text-align: right;
+            font-size: 0.9rem;
+            margin-left: auto;
+            color: #BB85FF;
+        }
+
+        .ob-1-body {
+            width: 100%;
+            display: flex;
+            margin-top: 1vw;
+        }
+
+        .ob-1-left,
+        .ob-1-right {
+            width: 50%;
+        }
+
+        .ob-1-left span {
+            width: 100%;
+            display: flex;
+            margin: 1vw 0;
+        }
+
+        .ob-1-left span h6 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin: 0;
+            width: 30%;
+        }
+
+        .ob-1-left span h5 {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 0;
+            width: 50%;
+        }
+
+        .ob-1-right h6 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin: 0 0 0.5vw 0;
+        }
+
+        .ob-1-right h5 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin: 0 0 0.5vw 0;
+            color: #BB85FF;
+        }
+
+        .ob-1-right h4 {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .order-box-2 {
+            width: 100%;
+        }
+
+        .ob-content {
+            width: 70%;
+            margin: 1.5vw auto;
+            border-top: 0.1vw solid #BB85FF;
+        }
+
+        .ob-2-heading {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin: 1vw 0;
+            display: flex;
+        }
+
+        .ob-2-heading span {
+            font-weight: 500;
+            color: #BB85FF;
+            margin-left: 1.5vw;
+        }
+
+        .ob-product-box {
+            width: 100%;
+            display: flex;
+            background-color: rgba(223, 197, 255, 0.15);
+            padding: 1vw 2vw;
+            border-radius: 0.5vw;
+        }
+
+        .obp-img {
+            width: 15%;
+        }
+        .obp-img img
+        {
+            height: 6vw;
+            object-fit: contain;
+        }
+        .obp-text {
+            width: 75%;
+        }
+        .obp-price {
+            width: 10%;
+        }
+        .obp-text h6
+        {
+            font-size: 0.9rem;
+            color: #CBCBCB;
+            margin: 0 0 0.5vw 0;
+            font-weight: 400;
+        }
+        .obp-text h5
+        {
+            font-size: 0.9rem;
+            margin: 0 0 0.5vw 0;
+            font-weight: 700;
+        }
+        .obp-text h4
+        {
+            font-size: 0.9rem;
+            margin: 0;
+            font-weight: 400;
+        }
+        .obp-price p 
+        {
+            font-size: 0.9rem;
+            margin: 0;
+            font-weight: 700;
+            text-align: right;
+        }
+        .both6 
+        {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 2vw 0 1vw 0;
+        }
+        .botp
+        {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 0;
+        }
+        .both5
+        {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 1vw 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="otp-upper-box">
+            <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/eazyprocure_logo.png" alt="eazyprocure_logo"
+                class="oub-img-1">
+            <span>
+                <h1>Hi Talha,</h1>
+                <h1>Have a great Thursday!</h1>
+                <p>We have sent you an OTP to your registered mobile number with us</p>
+                <p>Please use it to proceed with your transaction</p>
+            </span>
+            <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/order-placed.png" alt="otp-mob-img"
+                class="oub-img-2">
+        </div>
+        <div class="prog-ultra-super-box">
+            <div class="prog-super-box">
+                <div class="prog-container">
+                    <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/order-done.png" alt="otp-mob-img">
+                    <h6>Ordered</h6>
+                    <h5>on Feb 17</h5>
+                </div>
+                <span></span>
+                <div class="prog-container">
+                    <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/order-pending.png" alt="otp-mob-img">
+                    <h6>Confirmed</h6>
+                    <h5>on Feb 17</h5>
+                </div>
+                <span></span>
+                <div class="prog-container">
+                    <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/order-pending.png" alt="otp-mob-img">
+                    <h6>Ready to ship</h6>
+                    <h5>on Feb 17</h5>
+                </div>
+                <span></span>
+                <div class="prog-container">
+                    <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/order-pending.png" alt="otp-mob-img">
+                    <h6>Delivered</h6>
+                    <h5>on Feb 17</h5>
+                </div>
+            </div>
+        </div>
+        <div class="view-order-btn">
+            <button>View your order</button>
+        </div>
+        <p class="below-btn-text">Delivery times are estimated. If you're experiencing difficulty with this order,
+            please <span>contact the seller</span>. see more
+            info.</p>
+        <div class="order-box-1">
+            <div class="ob-1-head">
+                <div class="ob-1-head-left">
+                    <p>Order: <span>#108-1232412312-3435454</span></p>
+                </div>
+                <div class="ob-1-head-right">
+                    <p>View Invoice</p>
+                    <p>|</p>
+                    <p>Track this order</p>
+                </div>
+            </div>
+            <div class="ob-1-body">
+                <div class="ob-1-left">
+                    <span>
+                        <h6>Order Date:</h6>
+                        <h5>1 Jan, 2021</h5>
+                    </span>
+                    <span>
+                        <h6>Order Date:</h6>
+                        <h5>1 Jan, 2021</h5>
+                    </span>
+                    <span>
+                        <h6>Order Date:</h6>
+                        <h5>1 Jan, 2021</h5>
+                    </span>
+                </div>
+                <div class="ob-1-right">
+                    <h6>Address:</h6>
+                    <h5>Ahmad</h5>
+                    <h4>Flat XX, Building Emirates Tower, Dubai, United Arab Emirates</h4>
+                </div>
+            </div>
+        </div>
+        <div class="order-box-2">
+            <div class="ob-content">
+                <h1 class="ob-2-heading">SOLD BY <span>EazyProcure Test Seller</span></h1>
+                <div class="ob-product-box">
+                    <div class="obp-img">
+                        <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/obp-img-1.png" alt="eazyprocure_logo" >
+                    </div>
+                    <div class="obp-text">
+                        <h6>Electronics</h6>
+                        <h5>Apple iPhone X 128GB</h5>
+                        <h4>QTY: 1</h4>
+                    </div>
+                    <div class="obp-price">
+                        <p>AED 105</p>
+                    </div>
+                </div>
+                <div class="ob-product-box">
+                    <div class="obp-img">
+                        <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/obp-img-1.png" alt="eazyprocure_logo" >
+                    </div>
+                    <div class="obp-text">
+                        <h6>Electronics</h6>
+                        <h5>Apple iPhone X 128GB</h5>
+                        <h4>QTY: 1</h4>
+                    </div>
+                    <div class="obp-price">
+                        <p>AED 105</p>
+                    </div>
+                </div>
+                <h1 class="ob-2-heading">SOLD BY <span>EazyProcure Test Seller</span></h1>
+                <div class="ob-product-box">
+                    <div class="obp-img">
+                        <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/obp-img-1.png" alt="eazyprocure_logo" >
+                    </div>
+                    <div class="obp-text">
+                        <h6>Electronics</h6>
+                        <h5>Apple iPhone X 128GB</h5>
+                        <h4>QTY: 1</h4>
+                    </div>
+                    <div class="obp-price">
+                        <p>AED 105</p>
+                    </div>
+                </div>
+                <h6 class="both6">We'll let you know when your order is on its way to you so you can really get excited about it. We're doing everything
+                we can to ensure you get your order safely by:</h6>
+                <p class="botp">1. Sanitizing our facilities</p>
+                <p class="botp">2. Monitoring hygiene</p>
+                <p class="botp">3. Providing contactless payment</p>
+                <h5 class="both5">Until then, stay safe at home while we deliver to you.</h5>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-box-1">
+                <div class="footer-box-1-box footer-contact-box">
+                    <div>
+                        <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/help_icon.png" alt="help.png">
+                        <span>
+                            <p>Email</p>
+                            <h6>info@5dsolutions.ae</h6>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-box-1-box footer-contact-box">
+                    <div>
+                        <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/mail_icon.png"
+                            alt="instagram.png">
+                        <span>
+                            <p>Email</p>
+                            <h6>info@5dsolutions.ae</h6>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-box-1-box footer-contact-box">
+                    <div>
+                        <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/phone_icon.png"
+                            alt="instagram.png">
+                        <span>
+                            <p>Phone</p>
+                            <h6>+92 300 1234567</h6>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-box-1-box footer-social-box">
+                    <div>
+                        <a href="#"><img src="http://internal.5dsurf.com/eazyprocureemailtemplate/instagram.png"
+                                alt="instagram.png"></a>
+                        <a href="#"><img src="http://internal.5dsurf.com/eazyprocureemailtemplate/facebook.png"
+                                alt="facebook.png"></a>
+                        <a href="#"><img src="http://internal.5dsurf.com/eazyprocureemailtemplate/linkedin.png"
+                                alt="linkedin.png"></a>
+                        <a href="#"><img src="http://internal.5dsurf.com/eazyprocureemailtemplate/youtube.png"
+                                alt="youtube.png"></a>
+                        <a href="#"><img src="http://internal.5dsurf.com/eazyprocureemailtemplate/twitter.png"
+                                alt="twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-box-2">
+                <div class="footer-box-2-box-1">
+                    <div>
+                        <p>You are receiving this email as ahmed@live.com is registered on EazyProcure.ae</p>
+                        <p>2021 EazyProcure.ae Ecommerce</p>
+                    </div>
+                </div>
+                <div class="footer-box-2-box-2">
+                    <div>
+                        <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/appstore.png" alt="appstore.png">
+                        <img src="http://internal.5dsurf.com/eazyprocureemailtemplate/playstore.png"
+                            alt="playstore.png">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-box-3">
+                <p>5D SOLUTIONS © 2020</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

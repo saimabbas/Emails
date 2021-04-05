@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+
+    <style>
+      .otp-main-box
+      {
+        background-color: #FCFCFC;
+        border-radius: 2vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 4vw 15vw 3vw 15vw;
+        position: relative;
+      }
+      .otp-eazy-box
+      {
+          padding: 0vw 1vw;
+      }
+      .otp-eazy-box img
+      {
+        width: 12vw;
+        height: 12vw;
+      }
+      .otp-hi-box
+      {
+          padding-left: 1vw;
+          border-left: 2px solid #BB85FF;
+      }
+      .confi-box
+      {
+          margin-right: 8vw;
+      }
+      .otp-hi-box h6
+      {
+        font-size: 1.1vw;
+        font-weight: 600;
+        font-family: 'poppins';
+        color: #000000; 
+        padding-bottom: 0.35vw;
+        width: 85%;
+        margin: 0;   
+      }
+      .otp-hi-box p
+      {
+        font-size: 0.9vw;
+        font-weight: 400;
+        font-family: 'poppins';
+        color: #000000;  
+        margin: 0;   
+        width: 55%;
+      }
+      .otp-770 img
+      {
+        width: 12vw;
+        height: 12vw;
+        position: absolute;
+        top: 20%;
+        right: 0%;
+      }
+      .o-btn-para-box
+      {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+      }
+      .v-o-btn
+      {
+        width: 11vw;
+        height: 3vw;
+        background-color: #BB85FF;
+        color: #FFFFFF;
+        font-size: 0.85vw;
+        font-weight: 400;
+        font-family: 'poppins';
+        border-radius: 2vw;
+        border: none;
+        outline: none;
+        box-shadow: unset !important;
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+      }
+      .v-o-btn:hover
+      {
+          color: #FFFFFF;
+      }
+      .o-btn-para-box p
+      {
+        color: #000000;
+        font-size: 0.85vw;
+        font-weight: 400;
+        font-family: 'poppins'; 
+        margin: 0; 
+        width: 35%;
+        text-align: center;
+      }
+      .o-btn-para-box p span
+      {
+         color: #BB85FF;
+         text-decoration: underline;
+      }
+      .order-det-box
+      {
+          background-color: #FCFCFC;
+          border-radius: 0.5vw;
+          padding: 1.5vw;
+          margin: 4vw 25vw 3vw 25vw;
+      }
+      .o-num-box
+      {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 2vw;
+      }
+      .o-num-box p
+      {
+        color: #000000;
+        font-size: 0.85vw;
+        font-weight: 400;
+        font-family: 'poppins'; 
+        margin: 0; 
+        text-align: center;
+      }
+      .o-num-box p span
+      {
+         color: #BB85FF;
+      }
+      .o-num-box .v-i-box
+      {
+        color: #BB85FF;
+        font-size: 0.85vw;
+        font-weight: 400;
+        font-family: 'poppins'; 
+        margin: 0; 
+      }
+      .o-num-box pre span
+      {
+        border-left: 2px solid #BB85FF;
+        padding-left: 1vw;
+      }
+      .o-num-det
+      {
+          width: 15vw;
+      }
+      .o-num-h p
+      {
+        color: #000000;
+        font-size: 0.9vw;
+        font-weight: 600;
+        font-family: 'poppins'; 
+        margin: 0;   
+        width: 7vw;
+      }
+      .o-num-p p
+      {
+        color: #000000;
+        font-size: 0.9vw;
+        font-weight: 400;
+        font-family: 'poppins'; 
+        margin: 0;   
+        width: 7vw;
+      }
+      .order-h-p-box
+      {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 1vw;
+      }
+      .o-num-add
+      {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 20vw;
+      }
+      .o-num-add h6
+      {
+        color: #000000;
+        font-size: 0.9vw;
+        font-weight: 600;
+        font-family: 'poppins'; 
+        margin: 0;   
+      }
+      .o-num-add span
+      {
+        color: #BB85FF;
+        font-size: 0.9vw;
+        font-weight: 600;
+        font-family: 'poppins'; 
+        margin: 0;  
+        padding: 0.5vw 0; 
+      }
+      .o-num-add p
+      {
+        color: #000000;
+        font-size: 0.9vw;
+        font-weight: 400;
+        font-family: 'poppins'; 
+        margin: 0;   
+      }
+      .o-num-det-add-box
+      {
+          display: flex;
+          justify-content: space-between;
+      }
+      .test-seller-h
+      {
+        margin: 0vw 25vw 2vw 25vw;
+        border-top: 2px solid #BB85FF; 
+        padding-top: 2vw;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .test-seller-h p
+      {
+        color: #000000;
+        font-size: 0.9vw;
+        font-weight: 600;
+        font-family: 'poppins'; 
+        margin: 0; 
+        padding-right: 2vw; 
+      }
+      .test-seller-h span
+      {
+        color: #BB85FF;
+        font-size: 0.9vw;
+        font-weight: 400;
+        font-family: 'poppins'; 
+        margin: 0; 
+      }
+      .test-seller-2
+      {
+        margin: 0vw 25vw 2vw 25vw;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .test-seller-2 p
+      {
+        color: #000000;
+        font-size: 0.9vw;
+        font-weight: 600;
+        font-family: 'poppins'; 
+        margin: 0; 
+        padding-right: 2vw; 
+      }
+      .test-seller-2 span
+      {
+        color: #BB85FF;
+        font-size: 0.9vw;
+        font-weight: 400;
+        font-family: 'poppins'; 
+        margin: 0; 
+      }
+      .ts-main-box
+      {
+        margin: 0vw 25vw 2vw 25vw; 
+        background-color: #FCFCFC;
+        border-radius: 0.5vw;
+        padding: 1.5vw 0 1.5vw 1.5vw; 
+      }
+      .ts-f-box
+      {
+        display: flex;
+        padding-bottom: 2vw;
+      }
+      .ts-img
+      {
+          width: 10vw;
+          padding-right: 2vw;
+      }
+      .ts-img img
+      {
+          width: 6.5vw;
+          height: 6.5vw;
+      }
+      .ts-para
+      {
+          width: 40vw;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+      }
+      .ts-para span
+      {
+        color: #CBCBCB;
+        font-size: 0.9vw;
+        font-weight: 400;
+        font-family: 'poppins'; 
+        margin: 0; 
+      }
+      .ts-para h6
+      {
+        color: #000000;
+        font-size: 1vw;
+        font-weight: 600;
+        font-family: 'poppins'; 
+        margin: 0; 
+        padding: 0.8vw 0;
+      }
+      .ts-para p
+      {
+        color: #000000;
+        font-size: 1vw;
+        font-weight: 500;
+        font-family: 'poppins'; 
+        margin: 0; 
+      }
+      .ts-num
+      {
+        width: 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ts-num h5
+      {
+        color: #000000;
+        font-size: 1vw;
+        font-weight: 600;
+        font-family: 'poppins'; 
+        margin: 0; 
+      }
+
+
+      .rfq-para-btn p
+     {
+       font-size: 0.8vw;
+       color: #000000;
+       font-weight: 400;
+       font-family: 'poppins';
+       margin: 0;
+     }
+     .points-para
+     {
+         width: 90%;
+         padding-bottom: 1.25vw !important;
+     }
+     .o-rfq-para
+     {
+         margin: 0vw 25vw 2vw 25vw;
+     }
+     .o-points-para
+     {
+       width: 95% !important;
+     }
+
+    </style>
+</head>
+<body>
+    <div class="otp-main-box">
+        <div class="otp-eazy-box">
+            <img src="img/eazy-pic.svg" alt="">
+        </div>
+        <div class="otp-hi-box confi-box">
+           <h6>Woohoo! Your order has been placed. Sit tight and wait for confirmation</h6>
+           <p>We will start working on this order right away. We'll email you as soon as it ships.</p>
+        </div>
+        <div class="otp-770">
+           <img src="img/delivery-box-img.svg" alt="">
+        </div>
+    </div>
+    <div class="o-btn-para-box">
+        <button class="v-o-btn">View your order</button>
+        <p>Delivery times are estimated. If you're experiencing difficulty with this order, please <span>contact the seller.</span> see <span>more info.</span></p>
+    </div>
+    <div class="order-det-box">
+        <div class="o-num-box">
+            <p>Order: <span>#108-1232412312-3435454</span></p>
+            <pre class="v-i-box">View Invoice    <span>Track this order</span></pre>
+        </div>
+    <div class="o-num-det-add-box">
+       <div class="o-num-det">
+        <div class="order-h-p-box">
+           <div class="o-num-h">
+               <p>Order Date:</p>
+           </div>
+           <div class="o-num-p">
+               <p>1 Jan, 2021</p>
+           </div>
+        </div>
+        <div class="order-h-p-box">
+           <div class="o-num-h">
+               <p>Order Total:</p>
+           </div>
+           <div class="o-num-p">
+               <p>AED 115.70</p>
+           </div>
+        </div>
+        <div class="order-h-p-box">
+           <div class="o-num-h">
+               <p>Payment:</p>
+           </div>
+           <div class="o-num-p">
+               <p>Credit Card</p>
+           </div>
+        </div>
+       </div>
+       <div class="o-num-add">
+          <h6>Address:</h6>
+          <span>Ahmed</span>
+          <p>Flat XX, Building Emirates Tower, Dubai, United Arab Emirates</p>
+       </div>
+    </div>
+    </div>
+    <div class="test-seller-h">
+        <p>SOLD BY</p>
+        <span>EazyProcure Test Seller</span>
+    </div>
+    <div class="ts-main-box">
+        <div class="ts-f-box">
+            <div class="ts-img">
+                <img src="img/mobile-img.svg" alt="">
+            </div>
+            <div class="ts-para">
+                <span>Electronics</span>
+                <h6>Apple iPhone X 128GB</h6>
+                <p>Qty: 1</p>
+            </div>
+            <div class="ts-num">
+                <h5>AED 399</h5>
+            </div>
+        </div>
+        <div class="ts-f-box p-0">
+            <div class="ts-img">
+                <img src="img/apple-watch-img.svg" alt="">
+            </div>
+            <div class="ts-para">
+                <span>Electronics</span>
+                <h6>Apple iPhone X 128GB</h6>
+                <p>Qty: 1</p>
+            </div>
+            <div class="ts-num">
+                <h5>AED 399</h5>
+            </div>
+        </div>
+
+    </div>
+    <div class="test-seller-2">
+        <p>SOLD BY</p>
+        <span>Test Seller 2</span>
+    </div>
+    <div class="ts-main-box">
+        <div class="ts-f-box p-0">
+            <div class="ts-img">
+                <img src="img/beats-headphones-img.svg" alt="">
+            </div>
+            <div class="ts-para">
+                <span>Electronics</span>
+                <h6>Apple iPhone X 128GB</h6>
+                <p>Qty: 1</p>
+            </div>
+            <div class="ts-num">
+                <h5>AED 399</h5>
+            </div>
+        </div>
+    </div>
+    <div class="rfq-para-btn o-rfq-para">
+        <p class="points-para pb-3 o-points-para">We'll let you know when your order is on its way to you so you can really get excited about it. We're doing everything we can to ensure you get your order safely by:</p>
+        <p class="f-point">1. Sanitizing our facilities</p>
+        <p>2. Monitoring hygiene</p>
+        <p>3. Providing contactless payment</p>
+        <p class="pb-4 pt-4">Until then, stay safe at home while we deliver to you.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/javas.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/mdb.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

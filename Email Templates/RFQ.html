@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+
+     <style>
+      .rfq-main-box
+      {
+        margin: 2vw 15vw;
+        position: relative;
+      }
+      img.bg-img
+      {
+        width: 100%;
+      }
+      .rfq-headings
+      {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .rfq-headings h2
+      {
+          font-size: 2.75vw;
+          font-family: 'poppins';
+          font-weight: 700;
+          color: #FFFFFF;
+          margin: 0;
+      }
+      .rfq-headings p
+      {
+          font-size: 1vw;
+          font-family: 'poppins';
+          font-weight: 500;
+          color: #FFFFFF;
+          margin: 0;
+      }
+      .rfq-headings span
+      {
+          font-size: 0.85vw;
+          font-family: 'poppins';
+          font-weight: 400;
+          color: #FFFFFF;
+          margin: 0;
+      }
+      .side-logo
+      {
+        position: absolute;
+        top: -15%;
+        right: 2%;
+      }
+      .side-logo img
+      {
+        width: 12vw;
+        height: 12vw;
+      }
+      .logistic-box
+      {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #FFFFFF;
+        border-radius: 0.5vw 0.5vw 0 0;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        width: 57vw;
+      }
+      .lb-main-box
+      {
+        background-color: #EEEFF2;
+        border-radius: 0.5vw;
+        padding: 0.85vw 1.5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .lb-days
+      {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;  
+      }
+      .lb-days i
+      {
+          font-size: 1.1vw;
+          color: #BB85FF;
+      }
+      .lb-days p
+      {
+        font-size: 0.85vw;
+        font-family: 'poppins';
+        font-weight: 400;
+        color: #BB85FF;
+        margin: 0;
+        padding-left: 0.5vw;
+      }
+      .lb-para p
+      {
+        font-size: 0.85vw;
+        font-family: 'poppins';
+        font-weight: 400;
+        color: #BB85FF;
+        margin: 0;
+        padding-left: 0.5vw;
+      }
+      .lb-2nd-box
+      {
+          background-color: #FFFFFF;
+          border-radius: 0 0 0.5vw 0.5vw;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 1.5vw 0 1vw 0;
+      }
+      .i-num-box
+      {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-right: 3vw;
+        border-right: 2px solid #EEEFF2;
+      }
+      .i-num-box i 
+      {
+        font-size: 3vw;
+        color: #EEEFF2;
+        border-radius: 50%;
+        background-color: #BB85FF;
+        border: none !important;
+      }
+      .i-num-box span
+      {
+        font-size: 1.3vw;
+        font-family: 'poppins';
+        font-weight: 600;
+        color: #BB85FF;
+        margin: 0;
+        padding: 0.75vw 0;
+      }
+      .i-num-box p
+      {
+        font-size: 0.75vw;
+        font-family: 'poppins';
+        font-weight: 400;
+        color: #8B8B8B;
+        margin: 0;
+      }
+      .bord-box
+      {
+          border-right: none;
+          padding-right: 0 !important;
+      }
+      .rfq-enq-box
+      {
+        padding: 6vw 15vw 2vw 21.5vw;
+      }
+      .rfq-e-para h4
+      {
+        font-size: 1.35vw;
+        font-weight: 700;
+        font-family: 'poppins';
+        color: #BB85FF;
+        margin: 0;
+        padding-bottom: 1.25vw;
+      }
+      .rfq-e-para span
+      {
+        color: #251252;
+        font-size: 1.1vw;
+        font-weight: 700;
+        font-family: 'poppins';
+        margin: 0;
+      }
+      .rfq-e-para h2
+      {
+        color: #251252;
+        font-size: 1.1vw;
+        font-weight: 700;
+        font-family: 'poppins';
+        margin: 0;
+        padding-bottom: 2vw !important;
+        border-bottom: 2px solid #BB85FF;
+      }
+      .rfq-e-para p.inq-para
+      {
+        color: #251252;
+        font-size: 0.85vw;
+        font-weight: 400;
+        font-family: 'poppins';
+        margin: 0;
+        padding: 1vw 0 1.25vw 0;
+      }
+      .rfq-e-btn
+      {
+        width: 17vw;
+        height: 2.5vw;
+        background-color: #9F32C8;
+        color: #FFFFFF;
+        font-size: 0.85vw;
+        font-weight: 400;
+        font-family: 'poppins';
+        border-radius: 2vw;
+        border: none;
+        outline: none;
+        box-shadow: unset !important;
+      }
+      .rfq-e-btn:focus
+      {
+        outline: none;
+        box-shadow: unset !important;
+      }
+      .rfq-e-btn:hover
+      {
+        color: #FFFFFF;
+        border: none;
+      }
+      .rfq-e-para h6
+      {
+        color: #251252;
+        font-size: 0.85vw;
+        font-weight: 400;
+        font-family: 'poppins';
+        margin: 0;
+        padding: 1.65vw 0 1.85vw 0;
+        width: 73%;
+      }
+      .pb-info-main
+      {
+          display: flex;
+          padding: 1.25vw 0 1.5vw 0;
+          flex-direction: column;
+      }
+      .pb-info
+      {
+          display: flex;
+          align-items: center;
+          padding: 0.5vw 0;
+      }
+      .pb-info-h h3
+      {
+        color: #000000;
+        font-size: 0.9vw;
+        font-weight: 700;
+        font-family: 'poppins';
+        margin: 0;
+        width: 10vw;
+      }
+      .pb-info-p p
+      {
+        color: #000000;
+        font-size: 0.9vw;
+        font-weight: 400;
+        font-family: 'poppins';
+        margin: 0;  
+        padding-left: 4vw !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        width: 20vw;
+      }
+      .pb-info-p p.purple-para
+      {
+        color: #9F32C8;
+        font-size: 0.9vw;
+        font-weight: 400;
+        font-family: 'poppins';
+        margin: 0;  
+        padding-left: 4vw !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .pb-info-border
+      {
+          border-bottom: 2px solid #BB85FF;
+          padding-bottom: 2vw;
+      }
+     .rfq-para-btn p
+     {
+       font-size: 0.8vw;
+       color: #000000;
+       font-weight: 400;
+       font-family: 'poppins';
+       margin: 0;
+     }
+     .points-para
+     {
+         width: 90%;
+         padding-bottom: 1.25vw !important;
+     }
+     .view-rfq-btn
+     {
+        width: 17vw;
+        height: 2.5vw;
+        background-color: #9F32C8;
+        color: #FFFFFF;
+        font-size: 0.85vw;
+        font-weight: 400;
+        font-family: 'poppins';
+        border-radius: 2vw;
+        border: none; 
+        outline: none;
+        box-shadow: unset !important;
+     }
+     .view-rfq-btn:hover
+     {
+      color: #FFFFFF;
+     }
+
+
+     .w-main-footer
+      {
+        padding-top: 1.5vw;
+        background-color: #6B6B6B;
+        margin: 2vw 15vw 0vw 15vw;
+      }
+      .w-footer
+      {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom: 1px solid #FFFFFF;
+        padding-bottom: 1.5vw;
+      }
+      .help-c
+      {
+          display: flex;
+          justify-content: center;
+      }
+      .help-icon i
+      {
+        font-size: 1.1vw;
+        color: #FFFFFF;
+      }
+      .help-box
+      {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding-left: 0.75vw;
+      }
+      .help-box p
+      {
+        color: #FFFFFF;
+        font-size: 0.8vw;
+        font-weight: 400;
+        font-family: 'poppins';
+        margin: 0;
+      }
+      .help-box h6
+      {
+        color: #FFFFFF;
+        font-size: 0.9vw;
+        font-weight: 500;
+        font-family: 'poppins';
+        margin: 0;
+      }
+      .w-icons
+      {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .w-icons i
+      {
+        font-size: 1.2vw;
+        color: #FFFFFF;
+        margin-left: 1.5vw;
+      }
+      .footer-part-2
+      {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom: 1px solid #FFFFFF;
+        padding: 1.5vw 3vw 1.5vw 5vw;
+      }
+      .p2-para p
+      {
+        font-size: 0.75vw;
+        color: #FFFFFF;
+        font-weight: 300;
+        font-family: 'poppins';
+        margin: 0;
+        width: 75%;
+        margin-bottom: 0;
+      }
+      .p2-img-box
+      {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .p2-img-box img
+      {
+          width: 10vw;
+          height: 2vw;
+      }
+      .footer-last-part p
+      {
+        text-align: center;
+        font-size: 0.8vw;
+        font-weight: 400;
+        color: #FFFFFF;
+        font-family: 'poppins';
+        padding: 1vw 0;
+      }
+
+
+
+
+
+     </style>
+</head>
+<body>
+    <div class="rfq-main-box">
+        <img src="img/rfq-bg.svg" alt="" class="bg-img">
+        <div class="rfq-headings">
+            <h2>RFQ ENQUIRY</h2>
+            <p>Global Sourcing Marketplace</p>
+            <span>Get Quotations from the most suitable suppliers</span>
+        </div>
+        <div class="side-logo">
+            <img src="img/rfq-logo.svg" alt="">
+        </div>
+        <div class="logistic-box">
+           <div class="lb-main-box">
+               <div class="lb-days">
+                <i class="far fa-calendar-minus"></i>
+                <p>Past 90 days</p>
+               </div>
+               <div class="lb-para">
+                   <p>"EazyProcure Logistics"  From SELLER NAME received 4 quotation(s)</p>
+               </div>
+           </div>
+           <div class="lb-2nd-box">
+               <div class="i-num-box">
+                <i class="fas fa-user-circle"></i>
+                   <span>34345+</span>
+                   <p>RFQs</p>
+               </div>
+               <div class="i-num-box">
+                <i class="fas fa-user-circle"></i>
+                   <span>4567</span>
+                   <p>Industries</p>
+               </div>
+               <div class="i-num-box">
+                <i class="fas fa-user-circle"></i>
+                   <span>212345+</span>
+                   <p>Active Suppliers</p>
+               </div>
+               <div class="i-num-box">
+                <i class="fas fa-user-circle"></i>
+                   <span>234</span>
+                   <p>Countries/Regions</p>
+               </div>
+               <div class="i-num-box bord-box">
+                <i class="fas fa-user-circle"></i>
+                   <span>< 19h</span>
+                   <p>Avg Quotation Duration</p>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div class="row rfq-enq-box m-0">
+        <div class="col-8 rfq-enq-info p-0">
+            <div class="rfq-e-para">
+                <h4>RFQ ENQUIRY</h4>
+                <span>Hi Talha</span>
+                <p class="inq-para">Ahmed from Dubai, UAE has sent you an inquiry</p>
+                <button class="rfq-e-btn">LOGIN AND VIEW YOUR ENQUIRY</button>
+                <h6>He/she would be grateful if you would provide with a best quote for the best quote for the following items:</h6>
+                <h2>Product Basic Information</h2>
+                <div class="pb-info-main">
+                   <div class="pb-info">
+                    <div class="pb-info-h">
+                        <h3>Product Name</h3>
+                    </div>
+                    <div class="pb-info-p">
+                        <p>Apple iPhone x Space Grey</p>
+                    </div>
+                   </div>
+                   <div class="pb-info">
+                    <div class="pb-info-h">
+                        <h3>Category</h3>
+                    </div>
+                    <div class="pb-info-p">
+                        <p>Electronics</p>
+                    </div>
+                   </div>
+                   <div class="pb-info">
+                    <div class="pb-info-h">
+                        <h3>Sourcing Type</h3>
+                    </div>
+                    <div class="pb-info-p">
+                        <p>Sourcing type</p>
+                    </div>
+                   </div>
+                   <div class="pb-info">
+                    <div class="pb-info-h">
+                        <h3>Sourcing Purpose</h3>
+                    </div>
+                    <div class="pb-info-p">
+                        <p>Sourcing purpose</p>
+                    </div>
+                   </div>
+                   <div class="pb-info">
+                    <div class="pb-info-h">
+                        <h3>Quantity</h3>
+                    </div>
+                    <div class="pb-info-p">
+                        <p>34</p>
+                    </div>
+                   </div>
+                   <div class="pb-info">
+                    <div class="pb-info-h">
+                        <h3>Trade Terms</h3>
+                    </div>
+                    <div class="pb-info-p">
+                        <p>Trade Terms</p>
+                    </div>
+                   </div>
+                   <div class="pb-info">
+                    <div class="pb-info-h">
+                        <h3>Preferred Unit Price</h3>
+                    </div>
+                    <div class="pb-info-p">
+                        <p>AED 115.70</p>
+                    </div>
+                   </div>
+                   <div class="pb-info pb-info-border">
+                    <div class="pb-info-h">
+                        <h3>Details</h3>
+                    </div>
+                    <div class="pb-info-p">
+                        <p class="purple-para">View Details</p>
+                    </div>
+                   </div>
+                </div>
+                <div class="rfq-para-btn">
+                    <p class="points-para pb-3">We'll let you know when your order is on its way to you so you can really get excited about it. We're doing everything we can to ensure you get your order safely by:</p>
+                    <p class="f-point">1. Sanitizing our facilities</p>
+                    <p>2. Monitoring hygiene</p>
+                    <p>3. Providing contactless payment</p>
+                    <p class="pb-4 pt-4">Until then, stay safe at home while we deliver to you.</p>
+                    <button class="view-rfq-btn">Click Here to view RFQ</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+
+        </div>
+    </div>
+    <div class="w-main-footer">
+        <div class="w-footer">
+           <div class="help-c">
+               <div class="help-icon">
+                   <i class="fas fa-question-circle"></i>
+               </div>
+               <div class="help-box">
+                   <p>Help center</p>
+                   <h6>help@5dsolutions.ae</h6>
+               </div>
+           </div>
+           <div class="help-c">
+               <div class="help-icon">
+                   <i class="fas fa-envelope"></i>
+               </div>
+               <div class="help-box">
+                   <p>Email</p>
+                   <h6>info@5dsolutions.ae</h6>
+               </div>
+           </div>
+           <div class="help-c">
+               <div class="help-icon">
+                   <i class="fas fa-phone-alt"></i>
+               </div>
+               <div class="help-box">
+                   <p>Phone</p>
+                   <h6>+92 300 1234567</h6>
+               </div>
+           </div>
+           <div class="w-icons">
+               <i class="fab fa-instagram"></i>
+               <i class="fab fa-youtube"></i>
+               <i class="fab fa-twitter"></i>
+               <i class="fab fa-linkedin-in"></i>
+               <i class="fab fa-facebook-f"></i>
+           </div>
+        </div>
+        <div class="footer-part-2">
+            <div class="p2-para">
+                <p>You are receiving this email as ahmed@live.com is registered on EazyProcure.ae 2021 EazyProcure.ae Ecommerce</p>
+            </div>
+            <div class="p2-img-box">
+                <img src="img/apple-img.svg" alt="">
+                <img src="img/google-play-img.svg" alt="">
+            </div>
+        </div>
+        <div class="footer-last-part">
+            <p>5D SOLUTIONS © 2020</p>
+        </div>
+   </div>
+    
+
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/javas.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/mdb.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
